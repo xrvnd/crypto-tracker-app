@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav>
+        <div class="left-nav">
+            <a href="index.html" class="title">CRYPTO TRACKER</a>
+        </div>
+        <div class="right-nav">
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="#" class="nav-link">Liked Coins</a>
+            <div class="search-container">
+                <input type="text" id="search-box" placeholder="Search Coin" autocomplete="off">
+
+                <div class="dialog-box" id="search-dialog">
+                    <div class="dialog-content">
+                        <span id="close-dialog" class="close-btn">&times;</span>
+                        <h2>Search Results</h2>
+                            <ul id="search-result">
+                                <!-- TODO search result will be be populated here -->
+                            </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <table id="crypto-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Icon</th>
+                    <th>Name</th>
+                    <th>
+                        Price
+                        <i class="fa-solid fa-arrow-up"></i>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </th>
+                    <th>
+                        Volume
+                        <i class="fa-solid fa-arrow-up"></i>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </th>
+                    <th>
+                        Market
+                        <i class="fa-solid fa-arrow-up"></i>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </th>
+                    <th>Favourite</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO populate API data here -->
+            </tbody>
+        </table>
+    <!-- pagination and simmer we need to continue -->
+    </main>
+
+
+    
+
+    <script src="https://kit.fontawesome.com/4aa6640fb3.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
