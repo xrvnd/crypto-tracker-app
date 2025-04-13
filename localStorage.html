@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing of LS</title>
+  </head>
+  <body>
+    <h2>Enter Your Name</h2>
+    <input type="text" id="nameInput" />
+    <button onclick="saveName()">Save</button>
+    <button onclick="loadName()">Load</button>
+    <p id="output"></p>
+
+    <script>
+      function saveName() {
+        const name = document.getElementById("nameInput").value;
+        localStorage.setItem("userName", name);
+        alert("Name Saved to Local Storage");
+      }
+
+      function loadName() {
+        const storedName = localStorage.getItem("userName");
+        document.getElementById("output").innerText = storedName
+          ? "Hello, " + storedName
+          : "No name found in local storage!";
+      }
+
+      // Second refernce for an Object- to test
+      const user = {
+        name: "Rohan",
+        age: 26,
+        role: "Developer",
+      };
+
+      localStorage.setItem("userData", JSON.stringify(user));
+
+      // Retrieve the data from LS convert back to object
+
+      const retrievedUser = JSON.parse(localStorage.getItem("userData"));
+      document.write(retrievedUser.age);
+    </script>
+  </body>
+</html>
